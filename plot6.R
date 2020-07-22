@@ -27,7 +27,7 @@ NEI_Q6 <- inner_join(NEI, subset(SCC, Data.Category == "Onroad") %>% select(SCC)
 # Step 3:Create a smooth plots to show the trends for each
 ###############################################################################################################
 
-ggsave( filename = "C:/Users/peted/Desktop/Data_Science/ExploratoryDataAnalysis/Week 4/Plot6.png",
+ggsave( filename = "C:/Users/peted/Desktop/Data_Science/ExploratoryDataAnalysis/Week 4/Repo/Plot6.png",
         plot = ggplot(data = NEI_Q6, mapping = aes(x = year, y = TotalEmissions,color = fips)) +
           geom_smooth()+
           scale_x_continuous(breaks =c(1999,2002,2005,2008))+

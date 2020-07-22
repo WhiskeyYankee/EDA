@@ -18,6 +18,7 @@ close(DataCon)
 ###############################################################################################################
 
 NEI_Q5 <- inner_join(NEI, subset(SCC, Data.Category == "Onroad") %>% select(SCC), by = "SCC") %>%
+  filter(fips == "24510") %>%
   group_by(year) %>%
   summarise(TotalEmissions = sum(Emissions))
 
@@ -25,8 +26,8 @@ NEI_Q5 <- inner_join(NEI, subset(SCC, Data.Category == "Onroad") %>% select(SCC)
 # Step 3:Create a barplots with trendlines with facets set to the type 
 ###############################################################################################################
 
-ggsave( filename = "C:/Users/peted/Desktop/Data_Science/ExploratoryDataAnalysis/Week 4/Plot5.png",
+ggsave( filename = "C:/Users/peted/Desktop/Data_Science/ExploratoryDataAnalysis/Week 4/Repo/Plot5.png",
         plot = ggplot(data = NEI_Q5, mapping = aes(x = year, y = TotalEmissions)) +
           geom_smooth()+
           scale_x_continuous(breaks =c(1999,2002,2005,2008))+
-          ggtitle("Vehicle (On road) Emissions from 1999-2008"))
+          ggtitle("Baltimore Vehicle (On road) Emissions from 1999-2008"))

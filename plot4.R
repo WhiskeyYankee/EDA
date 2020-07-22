@@ -39,7 +39,7 @@ NEI_Q4 <- inner_join(NEI,Coal, by = c("SCC")) %>%
 # Step 4: create smooth plot to indicate the US Coal emissions from 1999-2008
 ###############################################################################################################
 
-ggsave( filename = "C:/Users/peted/Desktop/Data_Science/ExploratoryDataAnalysis/Week 4/Plot4.png",
+ggsave( filename = "C:/Users/peted/Desktop/Data_Science/ExploratoryDataAnalysis/Week 4/Repo/Plot4.png",
         plot = ggplot(data = NEI_Q4, mapping = aes(x = year, y = TotalEmissions)) +
           geom_smooth()+
           scale_x_continuous(breaks =c(1999,2002,2005,2008))+

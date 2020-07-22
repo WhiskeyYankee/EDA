@@ -26,7 +26,7 @@ NEI_Q3 <- NEI %>%
 # Step 3:Create a barplots with trendlines with facets set to the type 
 ###############################################################################################################
 
-ggsave( filename = "C:/Users/peted/Desktop/Data_Science/ExploratoryDataAnalysis/Week 4/Plot3.png",
+ggsave( filename = "C:/Users/peted/Desktop/Data_Science/ExploratoryDataAnalysis/Week 4/Repo/Plot3.png",
   plot = ggplot(data = NEI_Q3, mapping = aes(x = year,y = TotalEmissions)) +
   geom_col() +
   geom_smooth(formula = y ~ x, method = "lm", se = FALSE)+

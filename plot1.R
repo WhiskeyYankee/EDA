@@ -24,7 +24,7 @@ NEI_Q1 <- NEI %>%
 # Step 3:Create a barplot to clearly show how the total emissions varies from 1999 - 2008
 ###############################################################################################################
 
-png(filename = "C:/Users/peted/Desktop/Data_Science/ExploratoryDataAnalysis/Week 4/Plot1.png")
+png(filename = "C:/Users/peted/Desktop/Data_Science/ExploratoryDataAnalysis/Week 4/Repo/Plot1.png")
 
 with(data = NEI_Q1,
      barplot(height = TotalEmissions
